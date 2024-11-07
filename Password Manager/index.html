@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safetylock Password Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <!-- Left box: Form to add passwords -->
+    <article class="password-box password-box-left">
+        <header>
+            <h2>Safetylock</h2>
+        </header>
+        <section>
+            <form class="password-form">
+                <div class="form-group">
+                    <label>URL / naam</label>
+                    <input type="text" class="site-name" required>
+                </div>
+                <br><br>
+                <div class="form-group">
+                    <label>Wachtwoord</label>
+                    <input type="password" class="password-input" required>
+                </div>
+                <br><br>
+                <button class="toevoegen" type="submit">Toevoegen</button>
+            </form>
+        </section>
+    </article>
+
+    <!-- Right box: List of passwords -->
+    <article class="password-box password-box-right">
+        <header>
+            <h2>Uw Wachtwoorden</h2>
+        </header>
+        <ul class="password-list">
+            <li class="password-entry">
+                <div class="password-content">
+                    <span>Test #1</span>
+                    <span data-password="password123">********</span>
+                </div>
+                <button class="show-btn">Show</button>
+                <button class="delete-btn">Verwijder</button>
+            </li>
+        </ul>
+        <button class="show-all">Show All</button>
+    </article>
+
+    <!-- Swap button -->
+    <button class="swap-button"><-></button>
+</body>
+</html>

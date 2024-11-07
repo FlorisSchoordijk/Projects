@@ -1,0 +1,244 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+}
+
+.password-box{
+    width: 23vw;
+    height: 60vh;
+    background-color: white;
+    border-radius: 3px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.password-box-left{
+    margin-right: 60px;
+    border: 2px solid black;
+}
+
+.password-box-right{
+    margin-left: 60px;
+    border: 2px solid black;
+    overflow-y: scroll;
+}
+
+.swapped-left{
+    order: 2;
+    margin-left: 60px;
+}
+
+.swapped-right{
+    order: 1;
+    margin-right: 60px;
+}
+
+header h2{
+    font-weight: 300;
+    font-size: 250%;
+    margin-top: -130px;
+}
+
+.password-form{
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+}
+
+input{
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.form-group{
+    margin-bottom: 20px;
+    width: 250px;
+}
+
+.toevoegen{
+    padding: 10px;
+    background-color: #0ea8b0;
+    border: none;
+    color: black;
+    font-size: 16px;
+    border-radius: 15px;
+    border: 1px solid black;
+    cursor: pointer;
+    height: 5vh;
+    width: 130px;
+}
+
+.swap-button{
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #F24726;
+    color: black;
+    border: 7px solid black;
+    border-radius: 15%;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.password-entry{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    height: 8vh;
+    padding-top: 10px;
+}
+
+.password-content{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+    font-size: 150%;
+}
+
+.password-content span{
+    padding-top: 20px;
+}
+
+.show-btn, .delete-btn{
+    margin-left: 10px;
+}
+
+.show-btn{
+    padding: 10px;
+    background-color: #0ea8b0;
+    border: none;
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.delete-btn{
+    padding: 10px;
+    background-color: #DA0164;
+    border: none;
+    color: black;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.show-all{
+    margin-top: auto;
+    align-self: flex-end;
+    padding: 5px 15px;
+    background-color: #0ea8b0;
+    border: 3px solid black;
+    color: black;
+    font-size: 16px;
+    border-radius: 9px;
+    cursor: pointer;
+}
+
+.password-list{
+    padding-top: 20px;
+}
+
+.toevoegen:hover{
+    background: hsl(183, 85%, 30%);
+}
+
+.show-all:hover{
+    background: hsl(183, 85%, 30%);
+}
+
+.swap-button:hover{
+    background: hsl(10, 89%, 45%);
+}
+
+.show-btn:hover{
+    background: hsl(183, 85%, 30%);
+}
+
+.delete-btn:hover{
+    background: hsl(333, 99%, 37%);
+}
+
+@media (max-width: 1600px){
+    .password-box{
+        width: 400px;
+    }
+}
+
+@media (max-width: 1100px){
+body{
+    flex-direction: column;
+
+    .password-box{
+        margin-top: 40px;
+    }
+    
+    .password-box-left {
+        margin-right: 0px;
+    }
+        
+    .password-box-right {
+        margin-left: 0px;
+    }
+
+    .swapped-left {
+        order: 2;
+        margin-left: 0;
+    }
+    
+    .swapped-right {
+        order: 1;
+        margin-right: 0;
+    }
+
+    .swap-button {
+        order: 3;
+    }
+}
+}
+
+@media (max-width: 670px){
+    .swap-button {
+        position: relative;
+        width: 250px;
+        border-radius: 5%;
+        font-size: 50px;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        bottom: auto;
+        right: auto;
+    }
+}
